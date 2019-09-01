@@ -10,7 +10,7 @@ var indexRouter = require('./routes/index');
 var functionsRouter = require('./routes/functions');
 var javafunctionRouter = require('./routes/1.0javascriptFunction');
 var photoanimationRouter = require('./routes/1.1photoanimation');
-var cartoonanimationRouter = require('./routes/1.2cartoonanimation');
+
 
 var app = express();
 
@@ -31,8 +31,7 @@ app.use(cookieParser());
 app.use('/', indexRouter);
 app.use('/functions', functionsRouter);
 app.use('/javafunction',javafunctionRouter);
-app.use('/javaphotoanimation/',photoanimationRouter);
-app.use('/javacartoonanimation/',cartoonanimationRouter);
+app.use('/1.1PA/',photoanimationRouter);
 
 //hbs block
 var blocks = {};
