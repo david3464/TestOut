@@ -1,0 +1,174 @@
+/* B站：@VincentTV */
+/* Share with you */
+/* 主页：https://space.bilibili.com/402141442 */
+/* 本视频：https://www.bilibili.com/video/av49984936 */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(to bottom, #c0392b, #16a085, #2980b9);
+}
+.wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cube {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+  animation: abh 8s linear infinite;
+}
+.cube .side {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  padding: 10px;
+  background-color: #ffffffd9;
+}
+@keyframes abh {
+  0% {
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+  }
+}  
+.cube .cube-front {
+  transform: rotateY(0deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/1.jpg);
+  background-size: 100%
+}
+.cube .cube-back {
+  transform: rotateY(180deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/2.jpg);
+  background-size: 100%
+}
+.cube .cube-left {
+  transform: rotateY(-90deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/3.jpg);
+  background-size: 100%
+}
+.cube .cube-right {
+  transform: rotateY(90deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/4.jpg);
+  background-size: 100%
+}
+.cube .cube-top {
+  transform: rotateX(90deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/5.jpg);
+  background-size: 100%
+}
+.cube .cube-bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/6.jpg);
+  background-size: 100%
+}
+
+.cube2 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) translate(0px, 300px);
+  /* animation: cube 8s linear infinite; */
+}
+.cube2 .side2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  padding: 10px;
+  background-color: #ffffffd9;
+}
+.cube2 .cube2-front2 {
+  transform: rotateY(0deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/7.jpg);
+  background-size: 100%
+}
+.cube2 .cube2-back2 {
+  transform: rotateY(180deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/8.jpg);
+  background-size: 100%
+}
+.cube2 .cube2-left2 {
+  transform: rotateY(-90deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/9.jpg);
+  background-size: 100%
+}
+.cube2 .cube2-right2 {
+  transform: rotateY(90deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/10.jpg);
+  background-size: 100%
+}
+.cube2 .cube2-top2 {
+  transform: rotateX(90deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/11.jpg);
+  background-size: 100%
+}
+.cube2 .cube2-bottom2 {
+  transform: rotateX(-90deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/12.jpg);
+  background-size: 100%
+}
+.cube3 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) translate(0px, -600px);
+  /* animation: cube 8s linear infinite; */
+}
+.cube3 .side3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  padding: 10px;
+  background-color: #ffffffd9;
+}
+.cube3 .cube3-front3 {
+  transform: rotateY(0deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/13.jpg);
+  background-size: 100%
+}
+.cube3 .cube3-back3 {
+  transform: rotateY(180deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/14.jpg);
+  background-size: 100%
+}
+.cube3 .cube3-left3 {
+  transform: rotateY(-90deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/15.jpg);
+  background-size: 100%
+}
+.cube3 .cube3-right3 {
+  transform: rotateY(90deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/16.jpg);
+  background-size: 100%
+}
+.cube3 .cube3-top3 {
+  transform: rotateX(90deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/17.jpg);
+  background-size: 100%
+}
+.cube3 .cube3-bottom3 {
+  transform: rotateX(-90deg) translateZ(100px);
+  background-image: url(/images/2cartoonanimation/13Dcubeanimation-1/18.jpg);
+  background-size: 100%
+}
+/* .cube:hover {
+  animation-play-state: paused;
+}  */
+
+/* .cube2:hover {
+  animation-play-state: paused;
+}  */
