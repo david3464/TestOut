@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
 var flash = require('connect-flash');
 var session = require('express-session');
 var passport = require('passport');
-var ejsLint = require('ejs-lint');
+
 
 var app = express();
 
