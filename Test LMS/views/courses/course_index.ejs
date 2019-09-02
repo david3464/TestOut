@@ -1,32 +1,4 @@
 <% classes.forEach(classes => { %>
-  <div><%= classes.title %></div>
-  <div><%= classes.description %></div>
-  <div><%= classes.author %></div><br>
-<% }) %>
-
-
-
-<% for (var i = 0; i <classes.length; i++) {%>
-  <div><%= classes[i].title%></div>
-  <div><%= classes[i].description%></div>
-  <div><%= classes[i].author%></div><br>
-<% } %>
-
-
-<% for (var i = 0; i <classes.length; i++) {%>
-  <% if (classes[i].author == 'David') {%>
-      This is a David's Book!
-  <% } %>
-  <div><%= classes[i].title%></div>
-  <div><%= classes[i].description%></div>
-  <div><%= classes[i].author%></div><br>
-<% } %>
-
-
-
-
-
-<% classes.forEach(classes => { %>
     <div class="accordion" id="accordionExample">
       <div class="card">
         <div class="card-header" id="headingOne">
