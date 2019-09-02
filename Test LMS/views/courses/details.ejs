@@ -1,0 +1,38 @@
+course detail page
+
+<% if (typeof data != 'undefined') { %>
+    <% data.forEach(function(data) { %>
+        <div>
+            <%= data.id %>
+            <%= data.name %>
+        </div>
+    <% }) %>
+  <% } %>
+
+
+
+<% if (typeof classes != 'undefined') { %>
+  <% classes.forEach(function(classes) { %>
+      <div>
+          <%= classes.title %>
+          <%= classes.description %>
+          <%= classes.author %>
+      </div>
+  <% }) %>
+<% } %>
+
+
+<% if (typeof classes != 'undefined') { %>
+  <% classes.forEach(function(classes) { %>
+    <div class="card" style="width: 18rem;">
+      <img src="/pictures/<%= classes.title %>.jpg" class="card-img-top" alt="<%= classes.title %>">
+      <div class="card-body">
+        <h5 class="card-title"> <%= classes.title %></h5>
+        <p class="card-text">Description<%= classes.description %><br>
+                             And Author by:<%= classes.author %></p>
+
+        <a href="#" class="btn btn-primary">Dude Bro Stay Here</a>
+      </div>
+    </div>
+  <% }) %>
+<% } %> 
