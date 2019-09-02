@@ -5,6 +5,9 @@ var ClassSchema = mongoose.Schema({
 	course_number: { 
 		type: String
 	},
+	category: {
+		type: String
+	},
 	title: {
 		type: String
 	},

@@ -20,7 +20,9 @@ router.get('/', function(req, res, next) {
 //descriptions: Feature Course Page
 //comments: 
 router.get('/featurecourse', function(req, res, next) {
-		res.render('courses/1featurecourse');
+    Class.getClasses(function(err, classes){
+		res.render('courses/1featurecourse', { classes });
+	});
 });
 
 //router address localhost:3000/courses/commoncourse
