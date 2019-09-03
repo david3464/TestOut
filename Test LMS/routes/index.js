@@ -12,6 +12,7 @@ router.get('/', (req, res, next)=> {
 //router address localhost:3000/about
 //descriptions: Hidden Page, cant be direct into this page only type address
 //comments: Test Page for layout Setting
+//status: not online need direct route
 router.get('/about', (req, res, next)=> {
   res.render('about');
 });

@@ -4,12 +4,13 @@ var router = express.Router();
 
 
 // Include Employee Model
-const Class = require('../models/Course');
+const Course = require('../models/Course');
 
 
 //router address localhost:3000/courses
 //descriptions: Course Index Page
-//comments: 
+//comments: Test Page for Layout Setting
+//status: not online need direct route
 router.get('/', function(req, res, next) {
 	Class.getClasses(function(err, classes){
 		res.render('courses/course_index', { classes });
@@ -20,9 +21,13 @@ router.get('/', function(req, res, next) {
 //descriptions: Feature Course Page
 //comments: 
 router.get('/featurecourse', function(req, res, next) {
-    Class.getClasses(function(err, classes){
-		res.render('courses/1featurecourse', { classes });
-	});
+    Course.find(function(err,courses){
+		if (err) {console.log(err);}
+        else {
+            //   console.log(courses);
+              res.render('courses/1featurecourse', { courses: courses });
+        }
+	})
 });
 
 //router address localhost:3000/courses/commoncourse
@@ -67,16 +72,18 @@ router.get('/managercourse', function(req, res, next) {
     res.render('courses/7managercourse');
 });
 
-//router address localhost:3000/courses/details
+//router address localhost:3000/courses/:id/details
 //descriptions: Course Index Page
-//comments: 
-router.get('/details', (req, res, next)=> {
-    var data = [
-        { id: 1, name: "bob" },
-        { id: 2, name: "john" },
-        { id: 3, name: "jake" },
-    ];
-    res.render('courses/details', {data});
+//comments: Demo single Course Details
+router.get('/:id/details', async (req, res)=> {
+	try {
+        var course = await Course.findById(req.params.id)
+                                 .exec();
+        res.render('courses/details', { course:course });
+        // console.log(course)
+    } catch (error) {
+        res.redirect('/')
+    }
 });
 
 //router address localhost:3000/courses/lesson

@@ -1,28 +1,26 @@
-test
-
-
-    <% classes.forEach(classes => { %>
-        <% if (classes.category ==='featurecourse') { %> 
-        <div class="accordion" id="accordionExample">
-        <div class="card">
-            <div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#<%= classes.package %>" aria-expanded="true" aria-controls="collapseOne">
-                    <%= classes.title %>
-                </button>
-            </h2>
-            </div>
-            <div id="<%= classes.package %>" class="collapse off" aria-labelledby="headingOne" data-parent="#accordionExample">
-            <div class="card-body">
-                <%= classes.description %><br>
-                Package:<%= classes.package%><br>
-                Author:<%=classes.author%>
-            </div>
-            </div>
+<% courses.forEach(courses => { %>
+    <% if (courses.category ==='featurecourse') { %> 
+    <div class="accordion" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#<%= courses.package %>" aria-expanded="true" aria-controls="collapseOne">
+            Course<%= courses.course_number %>.<%= courses.title %>
+            </button>
+        </h2>
+        </div>
+        <div id="<%= courses.package %>" class="collapse off" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+            Description:<%= courses.description %><br>
+            Author:<%= courses.author%><br>
+            Package:<%= courses.package %><br>
+            <a class="button" href="/courses/<%= courses.id %>/details">Course Details</a>
         </div>
         </div>
-        <% } %>
-    <% }) %>
+    </div>
+    </div>
+    <% } %>
+<% }) %>
 
 
 
