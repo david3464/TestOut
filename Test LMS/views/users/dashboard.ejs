@@ -1,6 +1,7 @@
 <h1 class="mt-4">Dashboard</h1>
 <p class="lead mb-3">Welcome <%= user.username %></p>
 <p class="lead mb-3">From  <%= user.type %></p>
+<a href="/<%= user.type %>s/<%= user.username %>" class="btn btn-secondary">Detail Info</a>
 <a href="/users/logout" class="btn btn-secondary">Logout</a>
 
 <br><br>
@@ -39,3 +40,5 @@
       <div role="tabpanel" class="tab-pane" id="contactus4">6</div>
       <div role="tabpanel" class="tab-pane" id="contactus5">7</div>
   </div>
+
+  <script> document.title = 'User Dashboard' </script>

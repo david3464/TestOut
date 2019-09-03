@@ -35,7 +35,7 @@ router.get('/register', (req, res, next)=> {
 //descriptions: Register Handle
 //comments: Get User Info and Store Into Datebase
 router.post('/register', (req, res, next)=> {
-  const {branch, role, type, username, first_name, last_name, address, email, mobile, password, password2} = req.body;
+  const {branch, role, type, username, first_name, last_name, address, post_code, city, email, mobile, password, password2} = req.body;
   let errors = [];
   //Check Required Field
   if (!username) {errors.push({ msg: 'Please enter Username! This is Mandatory' });}
@@ -48,19 +48,19 @@ router.post('/register', (req, res, next)=> {
   if (username.length < 6) {errors.push({ msg: 'Username must be at least 6 characters' });}
   if (password.length < 6) {errors.push({ msg: 'Password must be at least 6 characters' });}
   if (errors.length > 0) {
-    res.render('users/register', {errors,branch,role,type,username,first_name,last_name,address,email,mobile, });
+    res.render('users/register', {errors,branch,role,type,username,first_name,last_name,address,post_code, city,email,mobile, });
   } else {
     //Validation Passed
     User.findOne({username: username})
       .then(user =>{
         if(user) {
           errors.push({ msg: 'This username is already been taken !' });
-          res.render('users/register', {errors,branch,role,type,username,first_name,last_name,address,email,mobile});
+          res.render('users/register', {errors,branch,role,type,username,first_name,last_name,address,post_code, city,email,mobile});
         }
         if(!user){
           const newUser = new User ({username, type, branch, password});
           if(type === 'employee') {
-            const newEmployee = new Employee ({first_name, last_name, branch, role, username, person_info: [{address, email, mobile}]});  
+            const newEmployee = new Employee ({username, first_name, last_name, role, address, post_code, city, email, mobile, branch});  
             User.saveEmployee(newUser, newEmployee, function(err, user){});
             req.flash('success_msg', 'You are now registered and can login in')
             res.redirect('/users/login')

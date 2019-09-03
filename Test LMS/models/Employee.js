@@ -10,6 +10,10 @@ var EmployeeSchema = mongoose.Schema({
 		type: String,
 		require: true
 	},
+	full_name: {
+		type: String,
+		require: true
+	},	
 	username: {
 		type: String,
 		require: true
@@ -18,11 +22,27 @@ var EmployeeSchema = mongoose.Schema({
 		type: String,
 		require: true
 	},
-    person_info: [{
-		address: {type: String},
-	    email: {type: String},
-        mobile: {type: String}
-	}],
+	address: {
+		type: String
+	},
+	post_code: {
+		type: String
+	},
+	city: {
+		type: String
+	},
+	address: {
+		type: String
+	},
+	location: {
+		type: String
+	},
+	email: {
+		type: String
+	},
+    mobile: {
+		type: String
+	},
 	branch: {
 		type: String,
 		require: true
@@ -35,3 +55,9 @@ var EmployeeSchema = mongoose.Schema({
 });
 
 var Employee = module.exports = mongoose.model('Employee', EmployeeSchema);
+
+// Get Employee by Username
+module.exports.getEmployeeByUsername = function(username, callback){
+	var query = {username: username};
+	Employee.findOne(query, callback);
+}
