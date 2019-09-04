@@ -1,26 +1,26 @@
 var mongoose = require('mongoose');
 
-// Student Schema
+// Employee Schema
 var EmployeeSchema = mongoose.Schema({
     first_name: {
 		type: String,
-		require: true
+		required: true
 	},
 	last_name: {
 		type: String,
-		require: true
+		required: true
 	},
 	full_name: {
 		type: String,
-		require: true
+		required: true
 	},	
 	username: {
 		type: String,
-		require: true
+		required: true
 	},
 	role: {
 		type: String,
-		require: true
+		required: true
 	},
 	address: {
 		type: String
@@ -45,7 +45,7 @@ var EmployeeSchema = mongoose.Schema({
 	},
 	branch: {
 		type: String,
-		require: true
+		required: true
 	},
 	classes:[{
 		class_id:{type: [mongoose.Schema.Types.ObjectId]},

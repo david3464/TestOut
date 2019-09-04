@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-// Class Schema
+// Course Schema
 var CourseSchema = mongoose.Schema({
 	course_number: { 
 		type: String

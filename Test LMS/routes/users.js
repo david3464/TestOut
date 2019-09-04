@@ -62,7 +62,7 @@ router.post('/register', (req, res, next)=> {
           if(type === 'employee') {
             const newEmployee = new Employee ({username, first_name, last_name, role, address, post_code, city, email, mobile, branch});  
             User.saveEmployee(newUser, newEmployee, function(err, user){});
-            req.flash('success_msg', 'You are now registered and can login in')
+            req.flash('success_msg', 'You are now registered as Employee User and can login in')
             res.redirect('/users/login')
           }
           // if(type === 'manager') {

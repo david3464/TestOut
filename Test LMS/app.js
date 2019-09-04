@@ -28,6 +28,7 @@ require('./config/passport')(passport);
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var employeesRouter = require('./routes/employees');
+var authorsRouter = require('./routes/authors');
 var coursesRouter = require('./routes/courses');
 
 // view engine set as ejs and alternative (default layout)
@@ -42,7 +43,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
@@ -90,6 +91,7 @@ app.use(function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/employees', employeesRouter);
+app.use('/authors', authorsRouter);
 app.use('/courses', coursesRouter);
 
 // catch 404 and forward to error handler

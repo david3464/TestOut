@@ -1,0 +1,23 @@
+<div class="form-group">
+        <label for="author_name">Author_Name</label><br>
+        <input
+        type="author_name"
+        id="author_name"
+        name="author_name"
+        class="author_name"
+        placeholder="Enter Your Auhtor Name"
+        value="<%= typeof author_name != 'undefined' ? author_name : '' %>"
+        />
+</div>
+<div class="form-group">
+        <label for="exampleFormControlSelect1">Choose Your Course Enroller Type</label>
+        <select class="form-control" id="exampleFormControlSelect1" name="type">
+          <option value="Feature_Course">Feature Course</option>
+          <option value="Common_Course">Common Course</option>
+          <option value="Front_Desk_Host_Course">Front Desk Host Course</option>
+          <option value="Server_Course">Server Course</option>
+          <option value="Sushi_Bar_Roller_Course">Sushi Bar Roller Course</option>
+          <option value="Kitchen_Chef_Course">Kitchen Chef Course</option>
+          <option value="Manager_Course">Manager Course</option>
+        </select>
+</div>

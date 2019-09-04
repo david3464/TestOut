@@ -1,0 +1,41 @@
+<br>
+<h2>Search By Authors Name</h2>
+<br>
+<form action="/authors" method="get">
+  <lablel>Author Name</lablel>
+  <input type="text" name="author_name">
+  <button type="submit">Search</button>
+</form>
+<br> 
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Author Name</th>
+        <th scope="col">Author Type</th>
+        <th scope="col">Join Date</th>
+      </tr>
+    </thead>
+   
+    <tbody>
+      <% for (var i = 0; i <authors.length; i++) {%>
+      <tr>
+        <th scope="row"><%= [i] %></th>
+        <td><%= authors[i].author_name %></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <% } %>
+    </tbody>
+</table>
+
+  <a href="/authors/new">Go Back Create Author Page</a>
+
+  <% authors.forEach(authors => { %>
+    <div><%= authors.author_name %></div>
+  <% }) %>
+
+<% for (var i = 0; i <authors.length; i++) {%>
+<div><%= authors[i].author_name %></div>
+
+<% } %>
