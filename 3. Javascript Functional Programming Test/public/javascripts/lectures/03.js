@@ -8,4 +8,3 @@ function setStyle(name, value) {
     oDiv.style[name] = value
 }
 
-

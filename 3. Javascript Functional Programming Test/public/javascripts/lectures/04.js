@@ -5,15 +5,9 @@ btn1.onclick = function() {
     alert('123')}
 
 
+var aDiv = document.getElementsByTagName ('div');
 
-
-
-
-
-
-
-
-
+aDiv[1].style.background ='red'
 
 
 }
