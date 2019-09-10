@@ -7,3 +7,5 @@ function setStyle(name, value) {
     var oDiv = document.getElementById('div5')
     oDiv.style[name] = value
 }
+
+

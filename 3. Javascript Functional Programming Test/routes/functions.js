@@ -29,5 +29,12 @@ router.get('/03', function(req, res, next) {
   res.render('functions/lecture03');
 });
 
+//router address localhost:2001/functions/04
+//descriptions: Lecutre Four Javascript
+//comments: 
+router.get('/04', function(req, res, next) {
+  res.render('functions/lecture04');
+});
+
 
 module.exports = router;
