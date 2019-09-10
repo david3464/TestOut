@@ -6,3 +6,5 @@ body {
 a {
   color: #00B7FF;
 }
+
+#div1 { width: 200px; height: 100px; background:#ccc; border: 1px solid #999;}
