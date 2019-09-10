@@ -13,7 +13,17 @@ function setText() {
     oTx1.value = 'abcdef';
 }
 
-function showHide {
-    var oTx1 = document.getElementById('text1');
-    oTx1.value = 'abcdef';
+function showHide() {
+    var oDiv = document.getElementById('div3');
+    if (oDiv.style.display == 'block') {
+        oDiv.style.display = 'none';
+    } else {
+        oDiv.style.display = 'block';
+    }    
 }
+
+function toRed() {
+    var oDiv = document.getElementById('div4');
+    oDiv.className='box'
+}
+
