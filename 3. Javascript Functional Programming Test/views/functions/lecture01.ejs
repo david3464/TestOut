@@ -1,1 +1,36 @@
-lecture 01
+
+<script src="/javascripts/lectures/01"></script> 
+        
+<input type="checkbox" 
+       onmouseover="getElementById('div1').style.display='block';" 
+       onmouseout="getElementById('div1').style.display='none';"/><br><br><br>
+<div id="div1">
+    为了您的信息安全
+</div>
+
+<h1>A Web Page</h1>
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+<button type="submit" onclick="alert('stop it!')">Click on me</button><br><br><br>
+
+<div id="div2" onmouseover="toGreen()">
+</div>
+
+
+
+<script>
+function myFunction() {  
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+function toGreen() {
+    document.getElementById('div2').style.width= '300px';
+    document.getElementById('div2').style.height= '300px';
+    document.getElementById('div2').style.background = 'green';
+}
+function toRed() { 
+    document.getElementById('div2').style.width= '200px';
+    document.getElementById('div2').style.height= '200px';
+    document.getElementById('div2').style.background = 'red';
+}
+</script>
