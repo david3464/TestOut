@@ -9,3 +9,5 @@ a {
 
 #div1 { width: 200px; height: 100px; background:#ccc; border: 1px solid #999; display: none;}
 #div2 { width: 200px; height: 200px; background:red}
+
+#div3 { width: 100px; height: 200px; background:#ccc; display: none;}

@@ -1,10 +1,15 @@
-function toGreen() {
-    getElementById('div2').style.width= '300px';
-    getElementById('div2').style.height= '300px';
-    getElementById('div2').style.background = 'green';
+function myFunction() { 
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
 }
-function toRed() {
-    getElementById('div2').style.width= '200px';
-    getElementById('div2').style.height= '200px';
-    getElementById('div2').style.background = 'red';
+function toGreen() {
+    var dge = document.getElementById('div2')
+    dge.style.width= '300px';
+    dge.style.height= '300px';
+    dge.style.background = 'green';
+}
+function toRed() { 
+    var dge = document.getElementById('div2')
+    dge.style.width= '200px';
+    dge.style.height= '200px';
+    dge.style.background = 'red';
 }

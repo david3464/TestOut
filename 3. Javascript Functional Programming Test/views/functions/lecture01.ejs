@@ -1,4 +1,4 @@
-
+Lecture 01
 <script src="/javascripts/lectures/01"></script> 
         
 <input type="checkbox" 
@@ -14,23 +14,9 @@
 
 <button type="submit" onclick="alert('stop it!')">Click on me</button><br><br><br>
 
-<div id="div2" onmouseover="toGreen()">
+<div id="div2" onmouseover="toGreen()" onmouseout="toRed()">
 </div>
 
 
 
-<script>
-function myFunction() {  
-    document.getElementById("demo").innerHTML = "Paragraph changed.";
-}
-function toGreen() {
-    document.getElementById('div2').style.width= '300px';
-    document.getElementById('div2').style.height= '300px';
-    document.getElementById('div2').style.background = 'green';
-}
-function toRed() { 
-    document.getElementById('div2').style.width= '200px';
-    document.getElementById('div2').style.height= '200px';
-    document.getElementById('div2').style.background = 'red';
-}
-</script>
+<script src="/javascripts/lectures/01.js"></script>
