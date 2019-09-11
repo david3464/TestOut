@@ -14,7 +14,7 @@ body {
     width: 150px;
     height: 150px;
     border: 1px solid red;
-    margin: 200px auto;
+    margin: 400px auto;
     transform-style: preserve-3d;
     /* 设置3D场景风格 */
     transform:rotateX(-20deg) rotateY(0deg);
