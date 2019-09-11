@@ -2,8 +2,24 @@ body {
     margin: 0;
     background: #000;
 }
+
+#perspective {
+    perspective: 800px;
+    /* 设置景深 */
+}
+
 #wrap {
+    position: relative;
     width: 150px;
     height: 150px;
-    margin: 150px auto;
+    border: 1px solid red;
+    margin: 200px auto;
+    transform-style: preserve-3d;
+    /* 设置3D场景风格 */
+    transform:rotateX() rotateY();
+    /* 选择旋转度数 */
+}
+
+#wrap img{
+    position: absolute;
 }
