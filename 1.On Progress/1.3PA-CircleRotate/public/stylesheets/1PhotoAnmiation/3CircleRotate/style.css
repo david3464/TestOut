@@ -1,0 +1,9 @@
+body {
+    margin: 0;
+    background: #000;
+}
+#wrap {
+    width: 150px;
+    height: 150px;
+    margin: 150px auto;
+}
