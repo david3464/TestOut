@@ -16,7 +16,7 @@ body {
     margin: 200px auto;
     transform-style: preserve-3d;
     /* 设置3D场景风格 */
-    transform:rotateX() rotateY();
+    transform:rotateX(0deg) rotateY(0deg);
     /* 选择旋转度数 */
 }
 
