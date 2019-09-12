@@ -1,1 +1,101 @@
-testtest
+<h2>Example 01</h2>
+var person = {<br>
+    name : "Brad",<br>
+    age : 35<br>
+}<br><br>
+console.log(person)<br>
+output: <br>
+{name: "Brad", age: 35}
+age: 35
+name: "Brad"
+__proto__: Object<br><br>
+console.log(person.name)<br>
+output: Brad<br>
+<h2>Example 02</h2>
+var person = {<br>
+    name : "Brad",<br>
+    age : 35,<br>
+    address : {<br>
+        street: "13 Wharton Square",<br>
+        city: "Scarborough"<br>
+    },<br>
+    children: ["David", "Kelvin"]<br>
+}<br><br>
+console.log(person.address.street)<br>
+output: 13 Wharton Square<br><br>
+console.log(person.children[1])<br>
+output: Kelvin<br>
+<br>
+<h2>Example 03</h2>
+var family = [{<br>
+name: "Brad", age: 35},<br>
+{name: "Kelvin", age: 12},<br>
+{name: "David", age: 9}]<br><br>
+console.log(family[1]);<br>
+output:<br>
+{name: "Kelvin", age: 12}
+age: 12
+name: "Kelvin"
+__proto__: Object<br><br>
+console.log(family[1].age);<br>
+output: 12<br>
+
+<ul id="family"></ul>
+
+<script>
+    /*var person = {
+        name : "Brad",
+        age : 35,
+        address : {
+            street: "13 Wharton Square",
+            city: "Scarborough"
+        },
+        children: ["David", "Kelvin"]
+    }
+    var family = [
+        {
+            name: "Brad",
+            age: 35
+        },
+        {
+            name: "Kelvin",
+            age: 12
+        },
+        {
+            name: "David",
+            age: 9
+        }
+    ]
+    let output = ''
+    for (let i=0; i<family.length; i++) {
+        output += '<li>'+family[i].name+'</li>';
+    }
+    document.getElementById('family').innerHTML = output;*/
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        // Typical action to be performed when the document is ready:
+        // document.getElementById("demo").innerHTML = xhttp.responseText;
+        console.log(xhttp.responseText);
+        }
+    };
+    xhttp.open("GET", "/database/family.json", true);
+    xhttp.send();
+    console.log(xhttp.responseText);
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
