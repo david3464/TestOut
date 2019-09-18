@@ -6,9 +6,8 @@ btn1.onclick = function() {
 
 
 var aDiv = document.getElementsByTagName ('div');
+// aDiv[1].style.background ='red'
+// for (var i=)
 
-aDiv[1].style.background ='red'
-
-
-}
+// }
 
