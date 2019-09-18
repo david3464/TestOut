@@ -12,7 +12,7 @@ window.onload = function() {
     };
 
     var btn2 = document.getElementById('btn2');
-    var oDiv7 = document.getElementById ('div7');
+    var oDiv7 = document.getElementById ('div2');
     var aCh = oDiv7.getElementsByTagName('input');
     btn2.onclick = function () {
         for (var i=0;i<aCh.length; i++){
