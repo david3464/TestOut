@@ -15,6 +15,7 @@ var functionsRouter = require('./routes/functions');
 var prepsRouter = require('./routes/preps');
 var lecturesRouter = require('./routes/lectures');
 var tutorialsRouter = require('./routes/tutorials');
+var vuesRouter = require('./routes/vues');
 
 
 var app = express();
@@ -39,8 +40,9 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/functions', functionsRouter);
 app.use('/func_preps', prepsRouter);
-app.use('/func_letctures', lecturesRouter);
+app.use('/func_lectures', lecturesRouter);
 app.use('/func_tutorials', tutorialsRouter);
+app.use('/func_vues', vuesRouter);
 
 
 // catch 404 and forward to error handler
