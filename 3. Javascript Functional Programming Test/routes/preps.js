@@ -12,28 +12,28 @@ router.get('/test', function(req, res, next) {
 //descriptions: Prerequisite Course One Javascript
 //comments: 
 router.get('/01', function(req, res, next) {
-    res.render('functions/preps/lecture01');
+    res.render('functions/preps/prep01');
   });
 
 //router address localhost:2001/func_preps/02
 //descriptions: Prerequisite Course One Javascript
 //comments: 
 router.get('/02', function(req, res, next) {
-  res.render('functions/preps/lecture02');
+  res.render('functions/preps/prep02');
 });
 
 //router address localhost:2001/func_preps/03
 //descriptions: Prerequisite Course One Javascript
 //comments: 
 router.get('/03', function(req, res, next) {
-  res.render('functions/preps/lecture03');
+  res.render('functions/preps/prep03');
 });
 
 //router address localhost:2001/func_preps/04
 //descriptions: Prerequisite Course One Javascript
 //comments: 
 router.get('/04', function(req, res, next) {
-  res.render('functions/preps/lecture04');
+  res.render('functions/preps/prep04');
 });
 
 
