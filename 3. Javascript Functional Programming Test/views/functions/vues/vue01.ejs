@@ -1,10 +1,39 @@
 test vue 01
 
+<div>
+  <div id = "app">
+    <section>
+      <div class="container">
+        <div class="title">
+          <!-- <img class="logo" v-bind:src="src"> 可以省略v-bind 缩写来着直接用冒号代替-->
+          <img class="logo" :src="src">
+          <h1>{{ title }}</h1>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
 
-<script src="/javascripts/cdn/vue.js"></script>
-<script>
-  let data = {
-    scr: '/images/1.jpg',
-    title: 'This is my Title for this webpage'
-  }
-</script>
+    <script src="/javascripts/cdn/vue.js"></script>
+    <script>
+        let data = {
+            src: '/images/1.jpg',
+            title: 'This is my Title for this webpage',
+            index: 0,
+            menu: [
+              {type : 'lectures', title 'lecture 01', link: 'javascript:;'},
+              {type : 'lectures', title 'lecture 02', link: 'javascript:;'},
+              {type : 'lectures', title 'lecture 03', link: 'javascript:;'},
+              {type : 'lectures', title 'lecture 04', link: 'javascript:;'},
+              {type : 'lectures', title 'lecture 05', link: 'javascript:;'},
+            ]
+
+            
+        }
+
+        let vm = new Vue({
+          el: '#app',
+          data : data
+
+        })
+    </script>
