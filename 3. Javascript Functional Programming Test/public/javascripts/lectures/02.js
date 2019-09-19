@@ -21,7 +21,6 @@ function showHide() {
         oDiv.style.display = 'block';
     }    
 }
-
 function toRed() {
     var oDiv = document.getElementById('div2');
     oDiv.className='box'
