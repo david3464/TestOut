@@ -1,6 +1,6 @@
 
 var RTI13_1 = function(num) {
-  var roman= "";
+  var result= "";
   var RomanToNumber = {
     M: 1000,
     CM: 900,
@@ -16,8 +16,14 @@ var RTI13_1 = function(num) {
     IV: 4,
     I: 1
   }
-  
-  return roman;
+  for (var key in RomanToNumber){
+    if(num >= RomanToNumber[key]){
+      result += key.repeat(Math.trunc(num/RomanToNumber[key]));
+      num -= RomanToNumber[key]*Math.trunc(num/RomanToNumber[key]);
+
+    }
+  }
+  return result;
 };
 
 var RTI13_2 = function(num) {
@@ -37,7 +43,7 @@ var RTI13_2 = function(num) {
     I: 1
   };
   // console.log(RomanToNum);
-  var roman = "";
+  var result = "";
 
   for (var key in RomanToNum) {
     // console.log("key: ", key);
@@ -49,11 +55,11 @@ var RTI13_2 = function(num) {
       console.log(num);
     }
   };
-  return roman;
+  return result;
 };
 
 var RTI13_3 = function(num) {
-  var roman= "";
+  var result= "";
   var roman_number = ["M", "CM", "D","CD","C", "XC","L", "XL", "X", "IX", "V", "IV", "I"];
   var number = ["1000", "900", "500","400","100", "90","50", "40", "10", "9", "5", "4", "1"];
   for (var i = 0; i <number.length; i++){
@@ -64,9 +70,9 @@ var RTI13_3 = function(num) {
       console.log(num);
     }
   }
-  return roman;
+  return result;
 };
 
 
-console.log(RTI13_1(3001));
+console.log(RTI13_1(1234));
 // console.log(RTI13_2(3876));
