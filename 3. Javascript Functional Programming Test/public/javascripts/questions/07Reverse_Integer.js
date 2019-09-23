@@ -37,7 +37,7 @@ var RI07_2 = function (num) {
 // solution 3
 var RI07_3 = function (num) {
     //create xstring var to change x to string
-    //create resutlt to return at the end (empty string)
+    //create result to return at the end (empty string)
     var xstring = num.toString();
     var result = '';
     //if (xstring[first])is '-' 
@@ -56,7 +56,7 @@ var RI07_3 = function (num) {
         result += xstring[i];
     }
     //xstring that is perfectly ready to go through a for loop
-    //reverse for loop throught x string
+    //reverse for loop through x string
     return (parseInt(result));
 };
 
