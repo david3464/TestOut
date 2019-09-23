@@ -1,11 +1,11 @@
 
 var RTI13_1 = function(num) {
   var roman= "";
-  var RomanNumeral = ["M", "CM", "D","CD","C", "XC","L", "XL", "X", "IX", "V", "IV", "I"];
+  var roman_number = ["M", "CM", "D","CD","C", "XC","L", "XL", "X", "IX", "V", "IV", "I"];
   var number = ["1000", "900", "500","400","100", "90","50", "40", "10", "9", "5", "4", "1"];
   for (var i = 0; i <number.length; i++){
-    while (num >= numbers[i]){
-      roman = roman + RomanNumeral[i];
+    while (num >= number[i]){
+      roman = roman + roman_number[i];
       num = num -number[i];
     }
   }
@@ -46,5 +46,5 @@ var RTI13_2 = function(num) {
 
 
 
-// console.log(RTI13_1(9));
-console.log(RTI13_2(3876));
+console.log(RTI13_1(36));
+// console.log(RTI13_2(3876));
