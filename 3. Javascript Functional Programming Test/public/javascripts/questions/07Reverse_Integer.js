@@ -63,4 +63,3 @@ var RI07_3 = function (num) {
 console.log(RI07_3(1230));
 console.log(RI07_3(-4560));
 console.log(RI07_3(5600));
-console.log(y)
