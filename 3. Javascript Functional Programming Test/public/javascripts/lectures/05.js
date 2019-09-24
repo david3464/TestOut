@@ -10,7 +10,7 @@ window.onload = function() {
       console.log(i);
       for(let j = 0; j <oBtn.length; j++) {
         oBtn[j].className = '', 
-        oDiv[j].style.display = 'none'
+        aDiv1[j].style.display = 'none'
         console.log(j)
       }
       this.className = 'active';
@@ -29,7 +29,12 @@ window.onload = function() {
   var oDiv3 = document.getElementById('div3');
   var aLi = oDiv3.getElementsByTagName('li');
   var aDiv2 = oDiv3.getElementsByTagName('div')[0];
-
+//Part Three
+  for(let i = 0; i < aLi.length; i) {
+    aLi[i].onmouseover = function() {
+      this.className = "active";
+    }
+  }
 
 
 }
