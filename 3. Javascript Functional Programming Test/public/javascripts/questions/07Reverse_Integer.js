@@ -5,7 +5,7 @@ Specifications
 */
 // solution 1
 var RI07_1 = function(num) {
-    let y;
+    var y;
     if(num < 0){
         y=num.toString().split('').reverse();
         console.log(y);
@@ -63,3 +63,4 @@ var RI07_3 = function (num) {
 console.log(RI07_3(1230));
 console.log(RI07_3(-4560));
 console.log(RI07_3(5600));
+console.log(y)

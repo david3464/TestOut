@@ -10,3 +10,4 @@ var P09_1 = function(str) {
 }; 
 
 console.log(P09_1("racecar!"));
+console.log(reg);
