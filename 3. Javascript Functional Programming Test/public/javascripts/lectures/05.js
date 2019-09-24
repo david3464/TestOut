@@ -30,16 +30,6 @@ window.onload = function() {
   var aLi = oDiv3.getElementsByTagName('li');
   var aDiv1 = oDiv3.getElementsByTagName('div')[0];
 
-  for (var i = 0; i < aLi.length; i){
-    aLi[i].index = i;
-    aLi[i].onmouseover = function() {
-      console.log(i);
-      for (var j = 0; j <aLi.length; j++) {
-        aLi[i].className = '';
-      }
-      this.className ='active';
-    };
-  }
 
 
 }
