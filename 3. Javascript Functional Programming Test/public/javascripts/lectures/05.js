@@ -5,7 +5,7 @@ window.onload = function() {
 //Part One 
   for(let i = 0; i <oBtn.length; i++) {
     oBtn[i].index = i;
-    oBtn[i].onclick = function(){
+    oBtn[i].onmouseover = function(){
     // alert(this.value);
       console.log(i);
       for(let j = 0; j <oBtn.length; j++) {
@@ -32,8 +32,8 @@ window.onload = function() {
 
   // for (var i = 0; i < aLi.length; i){
   //   aLi[i].onmouseover = function() {
-  //     for (var j = 0; j <aLi.length; j++) {
-  //       aLi[j].className = '';
+  //     for (var i = 0; j <aLi.length; i++) {
+  //       aLi[i].className = '';
   //     }
   //     this.className ='active';
   //   };
