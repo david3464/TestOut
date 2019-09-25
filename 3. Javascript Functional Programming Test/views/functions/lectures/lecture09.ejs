@@ -1,11 +1,26 @@
 <head>
 <style>
-
+* {margin: 0; padding:0}
+#div1 {width: 100px; height: 100px; background:red; position: absolute; left:100px; top:100px; margin:50px}
+#div2 {width:600px; height: 150px;margin:100px;background:black; position:relative; border:solid 1px black; overflow:hidden}
+#div2 ul {position:absolute; left:0; top:0}
+#div2 ul li{float: left; width: 150px; height: 150px; list-style: none}
 </style>  
-</head>
-
-lecture 09
 <script src="/javascripts/lectures/09.js"></script>
+</head>
+lecture 09<br><br>
+<div id="div1" onclick="alert('Left : '+this.offsetLeft)"></div><br><br><br><br><br><br><br><br><br>
 
+<a id="a1" href="javascript:">Going Left</a>
+<div id="div2">
+  <ul>
+    <li><img src="/images/1.jpg"></li>
+    <li><img src="/images/2.jpg"></li>
+    <li><img src="/images/3.jpg"></li>
+    <li><img src="/images/4.jpg"></li>
+
+  </ul>
+</div>
+<a id="a2" href="javascript:">Going Right</a>
 
         
