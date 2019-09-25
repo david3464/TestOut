@@ -36,32 +36,73 @@ router.get('/01', function(req, res, next) {
     res.render('functions/lectures/lecture04');
   });
 
-    //router address localhost:2001/func_lectures/05
+  //router address localhost:2001/func_lectures/05
   //descriptions: Lecture Five Javascript
   //comments: 
   router.get('/05', function(req, res, next) {
     res.render('functions/lectures/lecture05');
   });
 
-    //router address localhost:2001/func_lectures/06
+  //router address localhost:2001/func_lectures/06
   //descriptions: Lecture Six Javascript
   //comments: 
   router.get('/06', function(req, res, next) {
     res.render('functions/lectures/lecture06');
   });
 
-    //router address localhost:2001/func_lectures/07
+  //router address localhost:2001/func_lectures/07
   //descriptions: Lecture Seven Javascript
   //comments: 
   router.get('/07', function(req, res, next) {
     res.render('functions/lectures/lecture07');
   });
 
-    //router address localhost:2001/func_lectures/08
+  //router address localhost:2001/func_lectures/08
   //descriptions: Lecture Eight Javascript
   //comments: 
   router.get('/08', function(req, res, next) {
     res.render('functions/lectures/lecture08');
   });
 
+  //router address localhost:2001/func_lectures/09
+  //descriptions: Lecture Nine Javascript
+  //comments: 
+  router.get('/09', function(req, res, next) {
+    res.render('functions/lectures/lecture09');
+  });
+
+  //router address localhost:2001/func_lectures/10
+  //descriptions: Lecture Ten Javascript
+  //comments: 
+  router.get('/10', function(req, res, next) {
+    res.render('functions/lectures/lecture10');
+  });
+
+  //router address localhost:2001/func_lectures/11
+  //descriptions: Lecture Eleven Javascript
+  //comments: 
+  router.get('/11', function(req, res, next) {
+    res.render('functions/lectures/lecture11');
+  });
+
+  //router address localhost:2001/func_lectures/12
+  //descriptions: Lecture Twelve Javascript
+  //comments: 
+  router.get('/12', function(req, res, next) {
+    res.render('functions/lectures/lecture12');
+  });
+
+  //router address localhost:2001/func_lectures/13
+  //descriptions: Lecture Thirteen Javascript
+  //comments: 
+  router.get('/13', function(req, res, next) {
+    res.render('functions/lectures/lecture13');
+  });
+
+  //router address localhost:2001/func_lectures/14
+  //descriptions: Lecture Fourteen Javascript
+  //comments: 
+  router.get('/14', function(req, res, next) {
+    res.render('functions/lectures/lecture14');
+  });
 module.exports = router;
