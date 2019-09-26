@@ -15,20 +15,20 @@ window.onload = function() {
     var oDiv7 = document.getElementById ('div2');
     var aCh = oDiv7.getElementsByTagName('input');
     btn2.onclick = function () {
-        for (var i=0;i<aCh.length; i++){
+        for (let i=0;i<aCh.length; i++){
           aCh[i].checked = true;  
         }
     };
     var btn3 = document.getElementById('btn3');
     btn3.onclick = function () {
-        for (var i=0;i<aCh.length; i++){
+        for (let i=0;i<aCh.length; i++){
           aCh[i].checked = false;  
         }
     };
     var btn4 = document.getElementById('btn4');
     
     btn4.onclick = function () {
-        for (var i=0;i<aCh.length; i++) {
+        for (let i=0;i<aCh.length; i++) {
             if(aCh[i].checked == true){
             aCh[i].checked = false;  
             } else {

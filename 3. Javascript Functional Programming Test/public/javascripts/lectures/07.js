@@ -1,7 +1,7 @@
 function sum () {
   // alert(arguments.length);
   result = 0; 
-  for (var i = 0;i<arguments.length;i++) {
+  for (let i = 0;i<arguments.length;i++) {
     result += arguments[i];
   };
   return result;

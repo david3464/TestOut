@@ -10,7 +10,7 @@ window.onload = function() {
   };
 
   var aLi = document.getElementsByTagName('li')
-  for (var i = 0; i <aLi.length; i++){
+  for (let i = 0; i <aLi.length; i++){
     if (i%2 == 0) {
       aLi[i].style.background = "#CCC";
     } else {

@@ -40,7 +40,7 @@ window.onload = function () {
     //getFullYear() 获得当前月
     //getFullYear() 获得当前日 正常显示 1-31
     //getFullYear() 获得当前星期 0 是星期天， 6 是星期六 range 0-6
-    for (var i = 0; i < aImg.length; i++) {
+    for (let i = 0; i < aImg.length; i++) {
       aImg[i].src = '/images/'+str.charAt(i)+'.jpg';
     }
   };
