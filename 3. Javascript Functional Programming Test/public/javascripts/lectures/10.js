@@ -1,8 +1,19 @@
+function getByClass(oParent, sClass){
+  var aResult = [];
+  var aEle = oParent.getElementsByTagName('*');
+  for (var i = 0; i < aEle.length; i++) {
+    if (aEle[i].className === sClass){
+      aResult.push(aEle[i]);
+    }
+  }
+  return aResult;
+}
+
 window.onload = function () {
   var oUl1 = document.getElementById('ul1');
   // alert(oUl1.childNodes.length);
   // alert(oUl1.children.length);
-     alert(oUl1.parentNode);
+  //  alert(oUl1.parentNode);
   //修改子节点
   for (let i =0 ; i < oUl1.children.length; i++) {
     oUl1.children[i].style.background = 'red';
@@ -14,10 +25,32 @@ window.onload = function () {
   //   }; 
   //   // alternative could be use children replace childnodes
   // }
+
   var aA1s = document.getElementsByTagName('a');
   for (let i = 0; i < aA1s.length; i++) {
     aA1s[i].onclick = function () {
       this.parentNode.style.display = 'none';
     };
   };
+
+  oUl1.firstElementChild.style.background = "blue";
+
+  var oTxt1 = document.getElementById('txt1');
+  var oBtn1 = document.getElementById('btn1');
+
+  oBtn1.onclick = function () {
+    // oTxt1.value = "adfsafdfdsf";
+    // oTxt1['value'] = "adfsafdfdsf";
+    oTxt1.setAttribute('value','123');
+  }
+
+  var oUl2 = document.getElementById('ul2');
+  var aBox = getByClass(oUl2, 'box');
+  for (var i = 0; i < aBox.length; i++) {
+    aBox[i].style.background = 'red';
+  }
+
+
+
+
 }
