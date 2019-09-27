@@ -8,11 +8,16 @@ window.onload = function () {
     oUl1.children[i].style.background = 'red';
     }; 
   // for (let i =0 ; i < oUl1.childNodes.length; i++) {
-  //   alert(i + ', ' +oUl1.childNodes[i].nodeType);
+  //   // alert(i + ', ' +oUl1.childNodes[i].nodeType);
   //   if(oUl1.childNodes[i].nodeType ===1) {
   //     oUl1.childNodes[i].style.background = 'red';
   //   }; 
-    // alternative could be use children replace childnodes
+  //   // alternative could be use children replace childnodes
   // }
-
+  var aA1s = document.getElementsByTagName('a');
+  for (let i = 0; i < aA1s.length; i++) {
+    aA1s[i].onclick = function () {
+      this.parentNode.style.display = 'none';
+    };
+  };
 }
