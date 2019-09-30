@@ -1,13 +1,13 @@
-function getByClass(oParent, sClass){
-  var aResult = [];
-  var aEle = oParent.getElementsByTagName('*');
-  for (var i = 0; i < aEle.length; i++) {
-    if (aEle[i].className === sClass){
-      aResult.push(aEle[i]);
-    }
-  }
-  return aResult;
-}
+var  JSElement=document.createElement("script"); 
+JSElement.setAttribute("type","text/javascript");
+JSElement.setAttribute("src","/javascripts/function.js");
+document.head.appendChild(JSElement);
+// var newscript = document.createElement('script');
+// newscript.setAttribute('type','text/javascript');
+// newscript.setAttribute('src','/javascripts/function.js');
+// var head = document.getElementsByTagName('head')[0];
+// head.appendChild(newscript);
+
 
 window.onload = function () {
   var oUl1 = document.getElementById('ul1');
@@ -23,7 +23,7 @@ window.onload = function () {
   //   if(oUl1.childNodes[i].nodeType ===1) {
   //     oUl1.childNodes[i].style.background = 'red';
   //   }; 
-  //   // alternative could be use children replace childnodes
+  //   // alternative could be use children replace child nodes
   // }
 
   var aA1s = document.getElementsByTagName('a');
@@ -39,8 +39,8 @@ window.onload = function () {
   var oBtn1 = document.getElementById('btn1');
 
   oBtn1.onclick = function () {
-    // oTxt1.value = "adfsafdfdsf";
-    // oTxt1['value'] = "adfsafdfdsf";
+    // oTxt1.value = "test1";
+    // oTxt1['value'] = "test2";
     oTxt1.setAttribute('value','123');
   }
 
