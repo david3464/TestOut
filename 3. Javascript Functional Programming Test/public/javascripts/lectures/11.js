@@ -5,7 +5,11 @@ window.onload = function () {
   oBtn1.onclick = function () {
     var oLi = document.createElement('li');
     oLi.innerHTML = oTxt.value;
-    oUl1.appendChild(oLi);
-
+    if(aLi.length > 0) {
+      oUl1.insertBefore(oLi, oLi[0]);
+    } else {
+      oUl1.appendChild(oLi);
+    }
+    
   };
 }
