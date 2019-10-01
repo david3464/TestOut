@@ -1,10 +1,30 @@
-<div id="app"></div>
+<style>
 
+</style>
+<div id="app"></div>
+<h1 style="color:red">hi</h1>
+<div id="app2"></div>
 
 <script type="text/babel">
-  const appContainer = document.getElementById('app');
+  function getAppName () {
+    return 'World' + 123
+  }
+  function hello () {
+    return <h1 style={{color:'blue'}}>Hello, {getAppName()}!</h1>
+  }
+
   ReactDOM.render(
-    <a href="https://www.google.com">Hello World!</a>,
-    appContainer
+    hello(),
+    document.getElementById('app')
+  )
+
+  let element = React.createElement(
+    'h1',
+    {},
+    'Hello, World!'
+  )
+  ReactDOM.render(
+    element,
+    document.getElementById('app2')
   )
 </script>
