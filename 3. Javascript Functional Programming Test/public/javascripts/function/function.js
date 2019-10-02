@@ -77,3 +77,16 @@ var userOffset = currentDate.getTimezoneOffset()/60;
 var timeZoneDifference = userOffset - myOffset;    
 currentDate.setHours(currentDate.getHours() + timeZoneDifference);    
 document.write("The time and date in Central Europe is: " + currentDate.toLocaleString()); 
+
+
+function setUserName() {
+  let myName = prompt('Please enter your name.');
+  if(!myName || myName === null) {
+    setUserName();
+  } else {
+    localStorage.setItem('name', myName);
+    myHeading.innerHTML = 'Mozilla is cool, ' + myName;
+  }
+}
+
+console.log(setUserName());
