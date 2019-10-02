@@ -17,6 +17,18 @@ document.write(myVariable.toLowerCase() + '<br>');
 document.write(myVariable.toUpperCase() + '<br>');    
 document.write(finalString + '<br>');   
 
+//提示出本网址的所有信息
+document.write('<p>Here’s some information about this document:</p>');    
+document.write('<ul>');    
+document.write('<li>Referring Document: ' + document.referrer + '</li>');    
+document.write('<li>Domain: ' + document.domain + '</li>');    
+document.write('<li>URL:'  + document.URL + '</li>'); 
+document.write('</ul>'); 
+console.log('Here’s some information about this document:');    
+console.log('Referring Document: ' + document.referrer );    
+console.log('Domain: ' + document.domain );    
+console.log('URL:'  + document.URL ); 
+
 // 判断数组元素是否重复
 //input array
 //return array 
@@ -50,3 +62,18 @@ function RandomNum(min, max){
   return min + parseInt((Math.random() * (max-min +1)));
 }
 
+// 弹出确认(ok)或者取消(cancel)
+//alert ok or cancel 
+//return the result in the website
+var userChoice = window.confirm('Choose OK or Cancel');
+var result = (userChoice == true) ?'OK' : 'Cancel';
+document.write(result);    
+
+
+
+var myOffset = -2;    
+var currentDate = new Date();    
+var userOffset = currentDate.getTimezoneOffset()/60; 
+var timeZoneDifference = userOffset - myOffset;    
+currentDate.setHours(currentDate.getHours() + timeZoneDifference);    
+document.write("The time and date in Central Europe is: " + currentDate.toLocaleString()); 
