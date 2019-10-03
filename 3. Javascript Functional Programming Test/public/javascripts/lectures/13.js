@@ -13,7 +13,7 @@ function StartMove() {
 };
 
 let timer2 = null;
-function StartMove(iTargetPos) {
+function StartMoving(iTargetPos) {
   let oDiv2 = document.getElementById('div2');
   let speed = 5;
   if(oDiv2.offsetLeft>iTargetPos){
@@ -43,17 +43,43 @@ function StartMove(iTargetPos) {
 //     }
 //   },30)
 // }
-
-function ChangeTransparency (){
+let timer3 = null;
+let TransDeg =10;
+function ChangeTransparency (iPercentage){
+  let oDiv3 = document.getElementById('div3');
+  clearInterval(timer3);
+  timer3 = setInterval(function(){
+    let speed = 3; 
+    if(TransDeg<iPercentage) { 
+      speed *= 1;
+    } else {
+      speed *= -1;
+    }
+    if (TransDeg == iPercentage) {
+      clearInterval(timer3);
+    } else {
+      TransDeg +=speed;
+      oDiv3.style.filter = 'alpha(opacity='+TransDeg+')';
+      oDiv3.style.opacity = TransDeg/100;
+    }
+  },30);
 
 }
 
 window.onload = function() {
-  var oDiv2 = document.getElementById('div2');
+  let oDiv2 = document.getElementById('div2');
   oDiv2.onmouseover = function () {
-    startMove(0);
+    StartMoving(0);
   };
   oDiv2.onmouseout = function () {
-    startMove(-150);
+    StartMoving(-150);
+  }
+
+  let oDiv3 = document.getElementById('div3');
+  oDiv3.onmouseover = function () {
+    ChangeTransparency(100);
+  }
+  oDiv3.onmouseout = function () {
+    ChangeTransparency(10);
   }
 };
