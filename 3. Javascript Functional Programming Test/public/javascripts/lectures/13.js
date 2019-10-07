@@ -59,12 +59,16 @@ function ChangeTransparency (iPercentage){
 //缓冲运动
 function StartToMove() {
   setInterval(function() {
-    var oDiv4 = document.getElementById('div4')
-    var speed = Math.ceil((500 - oDiv4.offsetLeft)/10) 
-    speed >0 ? Math.ceil(speed) : Math.floor(speed);
+    var oDiv4 = document.getElementById('div4');
+    var speed = (300 - oDiv4.offsetLeft)/10;
+    speed > 0 ? speed = Math.ceil(speed) : speed = Math.floor(speed);
+    document.title = oDiv4.offsetLeft;
+
     oDiv4.style.left = oDiv4.offsetLeft + speed + 'px';
   },30)
 }
+
+
 
 window.onload = function() {
   let oBtn1 = document.getElementById('btn1');
@@ -93,3 +97,4 @@ window.onload = function() {
     StartToMove()
   }
 };
+

@@ -105,4 +105,41 @@ router.get('/01', function(req, res, next) {
   router.get('/14', function(req, res, next) {
     res.render('functions/lectures/lecture14');
   });
+
+  //router address localhost:2001/func_lectures/15
+  //descriptions: Lecture Fifteen Javascript
+  //comments: 
+  router.get('/15', function(req, res, next) {
+    res.render('functions/lectures/lecture15');
+  });
+
+  //router address localhost:2001/func_lectures/16
+  //descriptions: Lecture Sixteen Javascript
+  //comments: 
+  router.get('/16', function(req, res, next) {
+    res.render('functions/lectures/lecture16');
+  });
+
+  //router address localhost:2001/func_lectures/17
+  //descriptions: Lecture Seventeen Javascript
+  //comments: 
+  router.get('/17', function(req, res, next) {
+    res.render('functions/lectures/lecture17');
+  });
+
+    //router address localhost:2001/func_lectures/18
+  //descriptions: Lecture Eighteen Javascript
+  //comments: 
+  router.get('/18', function(req, res, next) {
+    res.render('functions/lectures/lecture18');
+  });
+
+    //router address localhost:2001/func_lectures/19
+  //descriptions: Lecture 19 Javascript
+  //comments: 
+  router.get('/19', function(req, res, next) {
+    res.render('functions/lectures/lecture19');
+  });
+
+
 module.exports = router;
