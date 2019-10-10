@@ -170,4 +170,5 @@ window.onload = function () {
     obj.innerHTML="Mouse Over Me"
   }
 
+// <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40px;">Mouse Over Me</div>
 }
