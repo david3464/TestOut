@@ -8,7 +8,8 @@ import './App.css';
 // import FunctionClick from './Component/FunctionClick';
 // import ClassClick from './Component/ClassClick';
 // import EventBlind from './Component/EventBlind';
-import ParentComponent from './Component/ParentComponent';
+// import ParentComponent from './Component/ParentComponent';
+import UserGreeting from './Component/UserGreeting';
 
 class App extends Component {
   render(){
@@ -27,7 +28,8 @@ class App extends Component {
         {/* <FunctionClick />*/}
         {/* <ClassClick /> */}
         {/* <EventBlind /> */}
-        <ParentComponent />
+        {/* <ParentComponent /> */}
+        <UserGreeting />
       </div>
     );
   }
